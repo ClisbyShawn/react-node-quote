@@ -1,8 +1,16 @@
 import React from "react";
+import "./button.css";
 
-const Button = ({ label, onClick, startIcon, endIcon }) => {
+const Button = ({
+  label,
+  onClick,
+  startIcon,
+  endIcon,
+  styleClass,
+  styleId,
+}) => {
   return (
-    <button onClick={onClick}>
+    <button className={styleClass} id={styleId} onClick={onClick}>
       {startIcon}
       {label}
       {endIcon}

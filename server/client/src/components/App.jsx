@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Box from "./Box/box";
 import Button from "./Button/button";
 import Title from "./Title/title";
+import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 class App extends Component {
   state = {
@@ -25,9 +29,37 @@ class App extends Component {
           subTitle="By Shawn Clisby"
           styleId="title-container"
         />
-        <Box text={this.state.text} author={this.state.author} />
-        <Button label="Twitter" onClick={this.handleOnTweet} />
-        <Button label="Next Quote" onClick={this.handleOnNextQuote} />
+        <Box
+          text={this.state.text}
+          author={this.state.author}
+          styleId="box-container"
+        />
+        <div id="button-container">
+          <Button
+            label="Twitter"
+            startIcon={
+              <FontAwesomeIcon
+                icon={faTwitter}
+                style={{ backgroundColor: "#1da1f2", marginRight: "5px" }}
+              />
+            }
+            onClick={this.handleOnTweet}
+            styleClass="button"
+            styleId="button-tweet"
+          />
+          <Button
+            label="Next Quote"
+            endIcon={
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                style={{ marginLeft: "5px" }}
+              />
+            }
+            onClick={this.handleOnNextQuote}
+            styleClass="button"
+            styleId="button-next-quote"
+          />
+        </div>
       </React.Fragment>
     );
   }
