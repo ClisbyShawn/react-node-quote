@@ -1,10 +1,11 @@
 import React from "react";
+import "./quote.css";
 
-const Quote = ({ text, author }) => {
+const Quote = ({ text, author, styleText, styleAuthor }) => {
   return (
     <div>
-      <p>{text}</p>
-      <p>- {author}</p>
+      <p id={styleText}>{text}</p>
+      <p id={styleAuthor}>- {author}</p>
     </div>
   );
 };

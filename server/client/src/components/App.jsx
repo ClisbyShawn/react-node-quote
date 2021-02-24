@@ -29,11 +29,15 @@ class App extends Component {
           subTitle="By Shawn Clisby"
           styleId="title-container"
         />
+
         <Box
           text={this.state.text}
           author={this.state.author}
           styleId="box-container"
+          styleText="quote-text"
+          styleAuthor="quote-author"
         />
+
         <div id="button-container">
           <Button
             label="Twitter"
@@ -47,6 +51,7 @@ class App extends Component {
             styleClass="button"
             styleId="button-tweet"
           />
+
           <Button
             label="Next Quote"
             endIcon={
