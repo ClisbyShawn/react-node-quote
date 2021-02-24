@@ -20,7 +20,11 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Title title="Quote Generator" subTitle="By Shawn Clisby" />
+        <Title
+          title="Quote Generator"
+          subTitle="By Shawn Clisby"
+          styleId="title-container"
+        />
         <Box text={this.state.text} author={this.state.author} />
         <Button label="Twitter" onClick={this.handleOnTweet} />
         <Button label="Next Quote" onClick={this.handleOnNextQuote} />
